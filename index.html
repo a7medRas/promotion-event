@@ -57,8 +57,6 @@
       font-family:'Orbitron', sans-serif;
       font-size:18px;
       font-weight:700;
-      color:rgba(255,255,255,0.9);
-      background:rgba(0,0,0,0.5);
       padding:4px 10px;
       border-radius:6px;
       letter-spacing:2px;
@@ -73,6 +71,79 @@
     .rank-ssvip        { background:linear-gradient(135deg,#d32f2f,#b71c1c,#880e4f); }
     .rank-ssvipsilver  { background:linear-gradient(135deg,#cfd8dc,#b0bec5,#90a4ae); color:#000; }
     .rank-ssvipgold    { background:linear-gradient(135deg,#ffd700,#f9a825,#ff6f00); color:#000; }
+
+    /* 🌟 ألوان البادج + Pulse Glow */
+    .rank-beginner #modalWatermark {
+      background:rgba(158,158,158,0.7); color:#fff;
+      animation: pulseGray 2.5s infinite;
+    }
+    @keyframes pulseGray {
+      0%,100% { text-shadow:0 0 5px #aaa; }
+      50% { text-shadow:0 0 15px #fff; }
+    }
+
+    .rank-pro #modalWatermark {
+      background:rgba(33,150,243,0.7); color:#fff;
+      animation: pulseBlue 2.5s infinite;
+    }
+    @keyframes pulseBlue {
+      0%,100% { text-shadow:0 0 5px #2196f3; }
+      50% { text-shadow:0 0 15px #64b5f6; }
+    }
+
+    .rank-vip #modalWatermark {
+      background:rgba(255,215,0,0.7); color:#000;
+      animation: pulseGold 2.5s infinite;
+    }
+    @keyframes pulseGold {
+      0%,100% { text-shadow:0 0 5px #ffeb3b; }
+      50% { text-shadow:0 0 15px #ffd700; }
+    }
+
+    .rank-vipplus #modalWatermark {
+      background:rgba(184,134,11,0.7); color:#fff;
+      animation: pulseBronze 2.5s infinite;
+    }
+    @keyframes pulseBronze {
+      0%,100% { text-shadow:0 0 5px #a1887f; }
+      50% { text-shadow:0 0 15px #d7ccc8; }
+    }
+
+    .rank-svip #modalWatermark {
+      background:rgba(142,36,170,0.7); color:#fff;
+      animation: pulsePurple 2.5s infinite;
+    }
+    @keyframes pulsePurple {
+      0%,100% { text-shadow:0 0 5px #ba68c8; }
+      50% { text-shadow:0 0 15px #e1bee7; }
+    }
+
+    .rank-ssvip #modalWatermark {
+      background:rgba(211,47,47,0.7); color:#fff;
+      animation: pulseRed 2.5s infinite;
+    }
+    @keyframes pulseRed {
+      0%,100% { text-shadow:0 0 5px #ef5350; }
+      50% { text-shadow:0 0 15px #ff8a80; }
+    }
+
+    .rank-ssvipsilver #modalWatermark {
+      background:rgba(176,190,197,0.7); color:#000;
+      animation: pulseSilver 2.5s infinite;
+    }
+    @keyframes pulseSilver {
+      0%,100% { text-shadow:0 0 5px #cfd8dc; }
+      50% { text-shadow:0 0 15px #eceff1; }
+    }
+
+    .rank-ssvipgold #modalWatermark {
+      background:rgba(255,193,7,0.8); color:#000;
+      animation: pulseGoldBadge 2.5s infinite;
+    }
+    @keyframes pulseGoldBadge {
+      0%,100% { text-shadow:0 0 5px #ffca28; }
+      50% { text-shadow:0 0 15px #ffd600; }
+    }
   </style>
 </head>
 <body>
