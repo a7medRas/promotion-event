@@ -49,18 +49,19 @@
       100% { left:125%; }
     }
 
-    /* 🏷️ Watermark */
-    .modal-content::after {
-      content: attr(data-rank-en);
-      font-family:'Orbitron', sans-serif;
+    /* 🏷️ Badge Watermark */
+    .watermark-badge {
       position:absolute;
-      font-size:70px;
+      bottom:15px;
+      left:15px;
+      font-family:'Orbitron', sans-serif;
+      font-size:18px;
       font-weight:700;
-      color:rgba(255,255,255,0.12);
-      top:50%; left:50%;
-      transform:translate(-50%,-50%);
-      pointer-events:none;
-      white-space:nowrap;
+      color:rgba(255,255,255,0.9);
+      background:rgba(0,0,0,0.5);
+      padding:4px 10px;
+      border-radius:6px;
+      letter-spacing:2px;
     }
 
     /* 🎨 خلفيات المستويات */
@@ -133,6 +134,7 @@
       <p><b>الباقي على الترقية:</b> <span id="modalNext"></span></p>
 
       <button class="close-btn" onclick="closeModal()">إغلاق</button>
+      <span class="watermark-badge" id="modalWatermark"></span>
     </div>
   </div>
 
@@ -224,7 +226,7 @@
 
           let modal=document.getElementById("modalCard");
           modal.className="modal-content "+getRankClass(current.rank);
-          modal.setAttribute("data-rank-en", current.en);
+          document.getElementById("modalWatermark").textContent=current.en;
 
           document.getElementById("profileModal").style.display="flex";
         });
